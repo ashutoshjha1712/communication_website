@@ -1,2 +1,1 @@
 web: gunicorn my_proj.wsgi --log-file -
-web: python views.py runserver 0.0.0.0:$PORT
