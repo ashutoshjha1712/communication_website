@@ -1,0 +1,90 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+<body>
+    <!-- {% for message in messages %}
+    <div class="alert alert-{{messages.tags}} alert-dissmissible fade show" role="alert">
+    <strong>message:</strong>{{message}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    {% endfor %} --
+    <h1>signup page</h1>
+    <form action="/signup" method="post">
+        {% csrf_token %}
+        <label for="">Firstname</label>
+        <input type="text" id="fname" name="fname" placeholder="enter your first name" required>
+        <br><br>
+        <label for="">Lastname</label>
+        <input type="text" id="lname" name="lname" placeholder="enter your last name" required>
+        <br><br>
+        <label for="">Username</label>
+        <input type="text" id="username" name="username" placeholder="enter your username" required>
+        <br><br>
+        <label for="">E-mail</label>
+        <input type="email" id="E-mail" name="E-mail" placeholder="enter your email address" required>
+        <br><br>
+        <label for="">Password</label>
+        <input type="password" id="pass1" name="pass1" placeholder="enter your password" required>
+        <br><br>
+        <label for="">Confirm-Password</label>
+        <input type="password" id="pass2" name="pass2" placeholder="confirm your password" required>
+        <br><br>
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<title> Registration or Sign Up form in HTML CSS | CodingLab </title>-->
+    <link rel="stylesheet" href="/static/css/signup.css">
+   </head>
+<body>
+  <div class="wrapper">
+    <h2>Registration</h2>
+    <form action="/signup" method="post">
+        {% csrf_token %}
+        <div class="input-box">
+            <input type="text" id="fname" name="fname" placeholder="Enter your First name" required>
+        </div>
+        <div class="input-box">
+            <input type="text" id="lname" name="lname" placeholder="Enter your Last name" required>
+        </div>
+        <div class="input-box">
+            <input type="text" id="username" name="username" placeholder="Enter your Username" required>
+            <div class="icon"><i class="fas fa-user"></i></div>
+        </div>
+        <div class="input-box">
+            <input type="text" id="E-mail" name="E-mail" placeholder="Enter your e-mail" required>
+        </div>
+        <div class="input-box">
+            <input type="password" id="pass1" name="pass1" placeholder="Create password" required><i class="fas fa-lock"></i>
+        </div>
+        <div class="input-box">
+            <input type="password" id="pass2" name="pass2" placeholder="Confirm password" required>
+        </div>
+        <div class="policy">
+            <input type="checkbox"><h3>I accept all terms & condition</h3>
+        </div>
+        <button type="submit" class="button">Submit</button>
+        <!-- <div class="input-box button">
+            <input type="Submit" value="Register Now">
+        </div> -->
+        <div class="text">
+            <h3>Already have an account? <a href="/signin">Login now</a></h3>
+        </div>
+    </form>
+  </div>
+</body>
+</html>

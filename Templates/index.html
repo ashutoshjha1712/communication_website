@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/common.css">
+  <link rel="stylesheet" href="/static/css/chatbot.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <!-- ===== Fontawesome CDN Link ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <!-- ===== CSS ===== -->
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="/static/js/bootstrap.bundle.min.js"></script>
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>ENGLISHBUDDY</title>
+  {% load static %}
+  <script src="{% static '/static/js/script.js' %}" type="text/javascript"></script>
+</head>
+<style>
+  .card-img-top {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+  }
+
+
+  .logo {
+    animation: movedown 1s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+  }
+
+  .logo {
+    animation: movedown 1s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes movedown {
+    0% {
+      transform: translateY(-100px);
+      visibility: visible
+    }
+
+    100% {
+      transform: translateY(0);
+      visibility: visible;
+    }
+  }
+
+  .navbar-nav {
+    animation: movedown 1s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+
+  }
+
+  #anm2 {
+    animation: moveright 1s linear 1;
+    animation-delay: 2s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+
+  }
+
+  @keyframes moveright {
+    0% {
+      transform: translatex(-100px);
+      visibility: visible
+    }
+
+    100% {
+      transform: translatex(0);
+      visibility: visible;
+    }
+  }
+
+  #anm3 {
+    animation: zoomin 1s linear 1;
+    animation-delay: 2s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+
+  }
+
+  @keyframes zoomin {
+    0% {
+      transform: scale(0.5);
+      visibility: visible
+    }
+
+    100% {
+      transform: scale(1);
+      visibility: visible;
+    }
+  }
+
+  .card {
+    animation: zoomin 1s linear 1;
+    animation-delay: 2s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+
+
+
+  }
+</style>
+
+<body>
+  <!-- {% for message in messages %}
+    <div class="alert alert-{{messages.tags}} alert-dissmissible fade show" role="alert">
+    <strong>message:</strong>{{message}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+  {% endfor %} -->
+  <section id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <h1 class="logo" style="font-weight:bold;text-shadow:4px 4px 3px violet; color:white;font-family: arial black;">LearningHub</h1>
+
+        <button class="navbar-toggler type=" button data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            <li class="nav-item">
+              <a class="nav-link" href="/signup">Register</a>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/signin">Login</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="https://drive.google.com/drive/folders/13E5TcFfVhE38n6T1DhbSJAv4bBaJdzBA?usp=sharing">Resources
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+  <!--banner-->
+  <section id="banner">
+    <div class="container ">
+      <div class='row' id="anm2">
+
+        <div class="col-md-6">
+          <h1 class="promo-title" style="font-weight:bold;">BEST WEBSITE FOR MASTERING ENGLISH</h1>
+          <h5>Register In This Website To Gain Proficiency And Confidence in English</h5>
+          <a href="https://www.youtube.com/watch?v=XIXvKKEQQJo">
+            <img src="static/images/play.png" class="play-btn">watch presentations</a>
+        </div>
+
+        <div class="col-md-6 text-center">
+          <img src="static/images/home2.png" class="img-fluid" id="anm3">
+        </div>
+      </div>
+    </div>
+    <img src="static/images/wave1.png" class="bottom-img">
+  </section><br><br>
+  <!---------------------------------grammar and vocabulary-------------------------------------------------------------->
+  <h1 style="color:darkgreen;font-weight: bold; text-align: center;">GRAMMAR AND VOCABULARY</h1>
+  <br><br>
+  <section style="background-color:lightgreen">
+    <div class="container">
+      <div class="vocabs" id="change_div">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card" style="width:22rem;">
+              <img src="static/images/content-writing-n.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title" style="text-align:center; font-weight: bold;">Content Writting</h5>
+                <p class="card-text">Here you will get the key concept for content writing and their tips and tricks.</p>
+                <a href="https://backlinko.com/hub/content/writing" class="btn btn-success">READ ME</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card" style="width: 22rem;">
+              <img src="static/images/essay.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title" style="text-align:center; font-weight: bold;">Essay Writting</h5>
+                <p class="card-text">You will get the quick description about essay writing and their  tips and tricks.</p>
+                <a href="https://www.rsc.org.uk/shakespeares-plays/famous-quotes" class="btn btn-success">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card" style="width: 22rem; height: 28rem;">
+              <img src="static/images/research2.jpg" class="card-img-top" alt="..." style="height:300px;">
+              <div class="card-body">
+                <h5 class="card-title" style="text-align:center;font-weight: bold;">Research Writting</h5>
+                <p class="card-text">Here you will get the complete description about resarch writting and their tips and tricks .</p>
+                <a href="https://owl.purdue.edu/owl/general_writing/common_writing_assignments/research_papers/index.html" class="btn btn-success">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br>
+  <!----------------------------------------------------------knowledge test------------------------------->
+  <h1 style="text-shadow: 1px 1px 1px grey; color:#8b0000;font-weight: bold; text-align: center;">KNOWLEDGE TEST !!!</h1>
+  <br><br>
+  <section style="background-color:rgb(255,204,203)">
+    <div class="container">
+      <div class="test">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card" style="width: 22rem;" style="box-shadow:3px 3px 4px rgb(100,120,140)">
+              <img src="static/images/test-your knowledge-modified.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"
+                  style="color:red; font-weight: bold; text-align: center; text-shadow:1px 1px 1px grey">BEGGINNER LEVEL
+                </h5>
+                <p class="card-text">This test includes fundamental grammar topics.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScJcZBiyAQxA_4NgwQ9uTegc0uwJBJDCH14TaIKQEL7vmVriw/viewform?usp=sf_link"
+                  class="btn btn-danger">Start Test</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card" style="width: 22rem;" style="box-shadow:3px 3px 4px rgb(100,120,140);">
+              <img src="static/images/test-your knowledge-modified.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"
+                  style="color:red; font-weight: bold; text-align:center; text-shadow: 1px 1px 1px grey;">INTERMEDIATE
+                  LEVEL</h5>
+                <p class="card-text">This test includes intermediate grammar topics.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScJcZBiyAQxA_4NgwQ9uTegc0uwJBJDCH14TaIKQEL7vmVriw/viewform?usp=sf_link"
+                  class="btn btn-danger">Start Test</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card" style="width: 22rem;" style="box-shadow:3px 3px 4px rgb(100,120,140)">
+              <img src="static/images/test-your knowledge-modified.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"
+                  style="color:red;font-weight: bold;text-align: center; text-shadow:1px 1px 1px grey">ADVANCE LEVEL
+                </h5>
+                <p class="card-text">This test includes tricky and advance grammar topics.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScJcZBiyAQxA_4NgwQ9uTegc0uwJBJDCH14TaIKQEL7vmVriw/viewform?usp=sf_link"
+                  class="btn btn-danger">Start Test</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br>
+  <h1 id="about" style="text-shadow: 1px 1px 1px grey; color:orange; font-weight: bold; text-align: center;">FREQUENTLY ASKED QUESTIONS</h1>
+  <br><br>
+  <!------------------------------------------------------------what we offer---------------------------------------------------------------------------->
+  <section>
+    <div class="container">
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              WHAT IS ENGLISH BUDDY
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body"> A platform where you get your right pair with whom you can enhance your
+              communication skills. </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              WHAT OPPURNITY DOES ENGLISHBUDDY PROVIDE
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Connects you with your right partner.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h1 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Privacy?
+            </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">There's nothing to worry about privacy, you just need to provide your
+                email.</div>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <br><br>
+  <h1 style="text-shadow: 1px 1px 1px grey; color:darkblue; font-weight: bold; text-align: center;">STUDENT REGISTERED</h1>
+  <br><br>
+  <!--------------------------------------------carousel implementation----------------->
+  <section style="background-color:#c1edf1;">
+    <div class="carousel-section">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="card-wrapper" style="display:flex;justify-content:center;">
+              <div class="card" style="width: 18rem;">
+                <img src="static/images/manni3-modified.png" class="card-img-top" alt="..."
+                  style="max-width:100%; max-height: 100%;">
+                <div class="card-body">
+                  <h5 class="card-title">Mani Kumari</h5>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star "></span>
+                  <span class="fa fa-star "></span>
+                  <a href="#" class="btn btn-info">View Profile</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="static/images/poornima-modified.png" class="card-img-top" alt="..."
+                  style="max-width:100%; max-height: 100%;">
+                <div class="card-body">
+                  <h5 class="card-title">Purnima Rawat</h5>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star "></span>
+                  <span class="fa fa-star "></span>
+
+                  <a href="#" class="btn btn-info">View Profile</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="static/images/manni-modified.png" class="card-img-top" alt="..."
+                  style="max-width:100%; max-height: 100%;">
+                <div class="card-body">
+                  <h5 class="card-title">Manni Kumari</h5>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star "></span>
+                  <span class="fa fa-star "></span>
+                  <a href="#" class="btn btn-info">View Profile</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card-wrapper" style="display:flex; justify-content:center;">
+              <div class="card" style="width: 18rem;">
+                <img src="static/images/shiva-modified.png" class="card-img-top" alt=""
+                  style="max-width:100%; max-height: 100%;">
+                <div class="card-body">
+                  <h5 class="card-title">Shivakant Tiwari</h5>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star "></span>
+                  <span class="fa fa-star "></span>
+                  <a href="#" class="btn btn-info">View Profile</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="static/images/aayush-modified.png" class="card-img-top" alt="..."
+                  style="max-width:100%; max-height: 100%;">
+                <div class="card-body">
+                  <h5 class="card-title">Aayush Jha</h5>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star checked"></span>
+                  <a href="#" class="btn btn-info">View Profile</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="static/images/abhilasha-modified.png" class="card-img-top" alt="..."
+                  style="max-width:100%; max-height: 100%;">
+                <div class="card-body">
+                  <h5 class="card-title">Abhilasha Singh</h5>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star "></span>
+                  <a href="#" class="btn btn-info">View Profile</a>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card-wrapper" style="display:flex; justify-content:center;">
+              <div class="card" style="width: 18rem;">
+                <img src="static/images/garvit-modified.png" class="card-img-top" alt="..."
+                  style="max-width:100%; max-height: 100%;">
+                <div class="card-body">
+                  <h5 class="card-title">Garvit Aggarwal</h5>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star "></span>
+                  <span class="fa fa-star "></span>
+                  <a href="#" class="btn btn-info">View Profile</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="static/images/shivangi.png" class="card-img-top" alt="..."
+                  style="max-width:100%; max-height: 100%;">
+                <div class="card-body">
+                  <h5 class="card-title">Shivangi Chauhan</h5>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star "></span>
+                  <span class="fa fa-star "></span>
+                  <a href="#" class="btn btn-info">View Profile</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="static/images/manni-modified.png" class="card-img-top" alt="..."
+                  style="max-width:100%; max-height: 100%;">
+                <div class="card-body">
+                  <h5 class="card-title">Nikita</h5>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star checked" style="color:orange;"></span>
+                  <span class="fa fa-star "></span>
+                  <span class="fa fa-star "></span>
+                  <a href="#" class="btn btn-info">View Profile</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-------------------------------------------------------chat boat --------------------------------->
+  <!-- <button class="open-button" onclick="openForm()">Chat</button>
+    <div class="chat-popup" id="myForm">
+        <form action="index" class="form-container"><h1>Chat</h1>
+            <label for="msg"><b>Message</b></label>
+            <textarea placeholder="Type message.." name="msg" required></textarea>
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <script>
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    }
+    </script> -->
+
+
+  <!----------------------------------------------footer---------------------------------------------->
+  <footer>
+    <footer class="footer-section">
+      <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+          <div class="row">
+            <div class="col-xl-4 col-md-4 mb-30">
+              <div class="single-cta">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="cta-text">
+                  <h4>Find us</h4>
+                  <span>Roorkee College Of Engineering Roorkee</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-4 mb-30">
+              <div class="single-cta">
+                <i class="fas fa-phone"></i>
+                <div class="cta-text">
+                  <h4>Call us</h4>
+                  <span>9667225602 </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-4 mb-30">
+              <div class="single-cta">
+                <i class="far fa-envelope-open"></i>
+                <div class="cta-text">
+                  <h4>Mail us</h4>
+                  <span>jhaa9696@gmail.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+          <div class="row">
+            <div class="col-xl-4 col-lg-4 mb-50">
+              <div class="footer-widget">
+                <div class="footer-logo">
+
+                </div>
+                <div class="footer-text">
+
+                </div>
+                <div class="footer-social-icon">
+                  <span>Follow us</span>
+                  <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                  <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                  <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+              <div class="footer-widget">
+                <div class="footer-widget-heading">
+                  <h3>Useful Links</h3>
+                </div>
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">about</a></li>
+                  <li><a href="#">services</a></li>
+                  <li><a href="#">portfolio</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">About us</a></li>
+
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+              <div class="footer-widget">
+                <div class="footer-widget-heading">
+                  <h3>Subscribe</h3>
+                </div>
+                <div class="footer-text mb-25">
+                  <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                </div>
+                <div class="subscribe-form">
+                  <form action="#">
+                    <input type="text" placeholder="Email Address">
+                    <button><i class="fab fa-telegram-plane"></i></button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+              <div class="copyright-text">
+                <p>Copyright &copy; 2022, All Right Reserved <a href="#">Ashutosh</a></p>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+              <div class="footer-menu">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Terms</a></li>
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Policy</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </footer>
+  <script>
+    $(document).ready(function () {
+      // Show the Modal on load
+      $(window).on('load', function () {
+        $("#chang_div").modal("hide");
+
+        let str =
+          '<div class="row">'+
+            '<div class="col-md-4">'+
+              '<div class="card" style="width:22rem;">'+
+               ' <img src="static/images/content-writing-n.png" class="card-img-top" alt="...">'+
+                '<div class="card-body">'+
+                  '<h5 class="card-title" style="text-align:center; font-weight: bold;">Content Writting</h5>'+
+                  '<p class="card-text">Here you will get the key concept for content writing and their tips and tricks.</p>'+
+                  '<a href="#" class="btn btn-success">READ ME</a>'+
+                '</div>'+
+               '</div>'+
+            '</div>'+
+            '<div class="col-md-4">'
+              '<div class="card" style="width: 22rem;">'+
+                '<img src="static/images/essay.webp" class="card-img-top" alt="...">'+
+                '<div class="card-body">'+
+                  '<h5 class="card-title" style="text-align:center; font-weight: bold;">Essay Writting</h5>'+
+                  '<p class="card-text">You will get the quick description about essay writing and their  tips and tricks.</p>'+
+                  '<a href="#" class="btn btn-success">Read More</a>'+
+                '</div>'+
+              '</div>'+
+           ' </div>'+
+            '<div class="col-md-4">'+
+              '<div class="card" style="width: 22rem; height: 28rem;">'+
+                '<img src="static/images/research2.jpg" class="card-img-top" alt="..." style="height:300px;">'+
+                '<div class="card-body">'+
+                  '<h5 class="card-title" style="text-align:center;font-weight: bold;">Research Writting</h5>'+
+                 ' <p class="card-text">Here you will get the complete description about resarch writting and their tips and tricks .</p>'+
+                 ' <a href="#" class="btn btn-success">Go somewhere</a>'+
+               ' </div>'+
+                '</div>'+
+           ' </div>'+
+
+
+         ' </div>'+
+        
+          
+        //setTimeout(function(){ $('#change_div').html(''); $('#change_div').html(str); }, 6000);
+        setInterval(function () { $('#change_div').html(''); $('#change_div').html(str); }, 8000);
+        // Hide the Modal
+        //$("#test_popup_close_myBtn").click(function(){ $("#forn-home").modal("hide"); });
+      });
+    
+  </script>
+  <script type="text/javascript">
+    (function (d, m) {
+      var kommunicateSettings =
+        { "appId": "6572ceebc8a5bb5b3d2fe3442319c428", "popupWidget": true, "automaticChatOpenOnNavigation": true };
+      var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+      s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+      var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+      window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+  </script>
+
+  <script src="" async defer></script>
+</body>
+
+</html>

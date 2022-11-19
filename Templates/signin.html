@@ -1,0 +1,72 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in page</title>
+</head>
+<body>
+    <h1>Signin page</h1>
+    <form action="/signin" method="post">
+        {% csrf_token %}
+        <label for="">Username</label>
+        <input type="text" id="username" name="username" placeholder="enter your username" required>
+        <br><br>
+        <label for="">Password</label>
+        <input type="password" id="pass1" name="pass1" placeholder="enter your password" required>
+        <br><br>
+        
+        <button type="submit">signin</button>
+    </form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!---- <title> Login Form | CodingLab </title>--->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+   <link rel="stylesheet" href="/static/css/signin.css">
+   </head>
+<body>
+  <div class="main_div">
+    <div class="title">Login Form</div>
+    <div class="social_icons">
+      <a href="#"><i class="fab fa-facebook-f"></i> <span>Facebook</span></a>
+      <a href="#"><i class="fab fa-twitter"></i><span>Twitter</span></a>
+    </div>
+    <form action="/signin" method="post">
+        {% csrf_token %}
+      <div class="input_box">
+        <input type="text" id="username" name="username" placeholder="Enter Your Username" required>
+        <div class="icon"><i class="fas fa-user"></i></div>
+      </div>
+      <div class="input_box">
+        <input type="password" id="pass1" name="pass1" placeholder="Password" required>
+        <div class="icon"><i class="fas fa-lock"></i></div>
+      </div>
+      <div class="option_div">
+        <div class="check_box">
+          <input type="checkbox">
+          <span>Remember me</span>
+        </div>
+        <div class="forget_div">
+          <a href="#">Forgot password?</a>
+        </div>
+      </div>
+      <button type="submit" class="button">Login</button>
+      <!-- <div class="input_box button">
+        <input type="submit" value="Login">
+      </div> -->
+      <div class="sign_up">
+        Not a member? <a href="#">Signup now</a>
+      </div>
+    </form>
+  </div>
+  
+</body>
+</html>

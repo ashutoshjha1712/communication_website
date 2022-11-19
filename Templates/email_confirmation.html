@@ -1,0 +1,12 @@
+{% autoescape off %} 
+
+welcome to Englishbuddy system login
+
+hello  {{name}}!
+
+please activate your account by clicking on the following link .
+
+confirmation link:http://{{domain}}{% url 'activate' uidb64=uid token=token %}
+
+{% endautoescape %}
+
